@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Kitchen</title>
+</head>
+<body>
+	<a id="returnLink" href="index.html">Return to My Favorite Restaraunts</a>
+	<h1>My Kitchen</h1>
+	<p>
+		Tell us what you like about our kitchen and we will add you to our mailing list.
+	</p>
+	<form id="myForm">
+		<label for="firstName">First Name:</label>
+		<input type="text" id="firstName"></br>
+		<label for="lastName">Last Name:</label>
+		<input type="text" id="lastName"></br>
+		<label for="address">Address:</label>
+		<input type="text" id="address"></br>
+		<label for="myStateList">State</label>
+		<input type="text" name="mydatalist" list="myStateList"/>
+		<datalist id="myStateList">
+			<option label="AL" value="AL"></option>
+			<option label="IN" value="IN"></option>
+			<option lable="WI" value="WI"></option>
+		</datalist></br>
+		<label for="postal">Zip Code:</label>
+		<input type="text" id="postal"></br>
+		<label for="tel-data">Telphone: </label>
+		<input type="text" id="tel-data"/></br>
+		<label for="email-data">Email:</label>
+		<input type="email" id="email-data"/></br>
+		<label for="birthday">Your birthday:</label>
+		<input type="date" id="birthday"/></br>
+		<label for="outside-text">What do you like about <b>our kitchen:</b> </label></br>
+		<textarea id="outside-text" cols="25" rows="10" maxlength="100"></textarea></br>
+		<input type="submit" value="Submit" onclick="confirmSubmit()" />
+	</form>
+	<script type="text/javascript">
+		function confirmSubmit() {
+			if (document.getElementById('email-data').value != "") {
+				var msg = "Thank you!  You've been added to our mailing list.";
+				if (document.getElementById('birthday').value != "") {
+					msg += " Look for something special from us on your birthday!"
+				}
+				alert(msg);
+				ddocument.getElementById("myForm").submit();
+		} else {
+			alert("Please enter an email adress");
+		}
+	}
+	</script>
+</body>
+</html>
