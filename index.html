@@ -2,57 +2,84 @@
 <html>
 <head>
 	<title>My Favorite Restaurants</title>
+    <link type="text/css" rel="stylesheet" href="assets/stylesheets/main.css"/>
 </head>
 <body>
-	<img src="https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?h=350&auto=compress&cs=tinysrgb" height="100" alt="first restaurant image">
-	<img src="https://images.pexels.com/photos/203213/pexels-photo-203213.jpeg?h=350&auto=compress&cs=tinysrgb" height="100" alt="second restaurant image">
-	<img src="https://images.pexels.com/photos/126371/pexels-photo-126371.jpeg?h=350&auto=compress&cs=tinysrgb" height="100" alt="third restaurant image">
-	<img src="https://images.pexels.com/photos/110813/pexels-photo-110813.jpeg?h=350&auto=compress&cs=tinysrgb" height="100" alt="fourth restaurant image">
+    <div id="hero"></div>
 	<h1>My Favorite Restaurants</h1>
 	<h2>Some of my <em>favorite</em> places to dine out in Indianapolis/Carmel</h2>
-	<table>
-		<tr>
-			<th>Restaurant Name</th>
-			<th>Address</th>
-			<th>Phone Number</th>
-			<th>Type of Food</th>
-		</tr>
-		<tr>
-			<td><a href="http://www.yatscajuncreole.com" target="_blank">Yats</a></td>
-			<td>12545 OLD MERIDIAN ST #130 CARMEL, IN 46032</td>
-			<td>(317)581-1881</td>
-			<td>Cajun Creole Crazy</td>
-		</tr>
-		<tr>
-			<td><a href="https://brockwaypub.wordpress.com/" target="_blank">Brockway Pub</a></td>
-			<td>12525 OLD MERIDIAN, CARMEL, IN 46032</td>
-			<td>(317)669-8080</td>
-			<td>Dublin Industrial</td>
-		</tr>
-		<tr>
-			<td><a href="http://bubsburgersandicecream.com" target="_blank">Bub's Burgers and Ice Cream</a></td>
-			<td>210 W Main St, CARMEL, IN 46032</td>
-			<td>(317)706-2827</td>
-			<td>Burgers and Ice Cream</td>
-		</tr>
-		<tr>
-			<td><a href="http://www.citybbq.com" target="_blank">City Barbeque</a></td>
-			<td>1356 Rangeline Rd, CARMEL, IN 46032</td>
-			<td>(317)660-8369</td>
-			<td>American BBQ</td>
-		</tr>
-		<tr>
-			<td><a href="http://www.mtmtavern.com" target="_blank">Matt The Miller's Tavern</a></td>
-			<td>11 City Center Dr, CARMEL, IN 46032</td>
-			<td>(317)805-1860</td>
-			<td>Upscale Tavern</td>
-		</tr>
-		<tr>
-			<td><a href="myKitchen.html" target="_self">My Kitchen</a></td>
-			<td>1305 N 14th St, Wausau, WI 54403</td>
-			<td>(715)555-1212</td>
-			<td>My home place</td>
-		</tr>
-	</table>
+    <div class="popUp" id="divPopup"><img src="http://yatscajuncreole.com/wp/wp-content/uploads/2016/02/2-college1.jpg" id="popupImg" width="400"></div>
+    <div id="tableDiv">
+        <table>
+            <tr>
+                <th>Restaurant Name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Type of Food</th>
+            </tr>
+            <tr>
+                <td class="imageSwap" id="img1"><a href="http://www.yatscajuncreole.com" target="_blank">Yats</a></td>
+                <td>12545 OLD MERIDIAN ST #130 CARMEL, IN 46032</td>
+                <td>(317)581-1881</td>
+                <td>Cajun Creole Crazy</td>
+            </tr>
+            <tr>
+                <td class="imageSwap" id="img2"><a href="https://brockwaypub.wordpress.com/" target="_blank">Brockway Pub</a></td>
+                <td>12525 OLD MERIDIAN, CARMEL, IN 46032</td>
+                <td>(317)669-8080</td>
+                <td>Dublin Industrial</td>
+            </tr>
+            <tr>
+                <td class="imageSwap" id="img3"><a href="http://bubsburgersandicecream.com" target="_blank">Bub's Burgers and Ice Cream</a></td>
+                <td>210 W Main St, CARMEL, IN 46032</td>
+                <td>(317)706-2827</td>
+                <td>Burgers and Ice Cream</td>
+            </tr>
+            <tr>
+                <td class="imageSwap" id="img4"><a href="http://www.citybbq.com" target="_blank">City Barbeque</a></td>
+                <td>1356 Rangeline Rd, CARMEL, IN 46032</td>
+                <td>(317)660-8369</td>
+                <td>American BBQ</td>
+            </tr>
+            <tr>
+                <td class="imageSwap" id="img5"><a href="http://www.mtmtavern.com" target="_blank">Matt The Miller's Tavern</a></td>
+                <td>11 City Center Dr, CARMEL, IN 46032</td>
+                <td>(317)805-1860</td>
+                <td>Upscale Tavern</td>
+            </tr>
+            <tr>
+                <td class="imageSwap" id="img6"><a href="myKitchen.html" target="_self">My Kitchen</a></td>
+                <td>1305 N 14th St, Wausau, WI 54403</td>
+                <td>(715)555-1212</td>
+                <td>My home place</td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            var imgMap = new Map();
+            imgMap.set("img1","http://yatscajuncreole.com/wp/wp-content/uploads/2016/02/2-college1.jpg");
+            imgMap.set("img2","https://brockwaypub.files.wordpress.com/2015/09/20150720-img_6977.jpg");
+            imgMap.set("img3","http://www.bubsburgersandicecream.com/wp-content/plugins/doptg/uploads/9qwEEFpYeGrm9OfwhQKAAkCweROH8HEyxHfLsatLBrpkRcZwdQOF2cdPEsqcTjMar.jpg");
+            imgMap.set("img4","https://www.citybbq.com/wp-content/uploads/2017/05/DSC_0283-2-768x511.jpg"); imgMap.set("img5","https://mtmtavern.com/Portals/0/EasyGalleryImages/471/PortfolioPro/Thumbs/431654437_10152186504526461_2078930894_n33591.jpg"); imgMap.set("img6","https://mtmtavern.com/Portals/0/EasyGalleryImages/471/PortfolioPro/Thumbs/401533943_10152119501781461_1194411309_n37839.jpg");
+        	$(document).ready(function() {
+				wireEvents();
+
+		});
+        
+        function wireEvents() {
+            $('.imageSwap').mouseenter(function() {
+                imgURL = imgMap.get($(this).attr("id"));
+                $('#popupImg').attr("src",imgURL);
+				$('#divPopup').css("visibility", "visible");
+			});
+            
+            $('.imageSwap').mouseleave(function() {
+				$('#divPopup').css("visibility", "hidden");
+			});            
+        }
+            
+
+</script>
 </body>
 </html>
